@@ -5,4 +5,4 @@ greaterThan100 :: [Int] -> [Int]
 greaterThan100 = filter (>100)
 
 evenNumberGreatherThan100 :: [Int] -> Bool
-evenNumberGreatherThan100 xs = even . length . greaterThan100 $ xs
+evenNumberGreatherThan100 = even . length . greaterThan100
