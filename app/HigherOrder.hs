@@ -14,4 +14,4 @@ foobar (x:xs)
   | otherwise = foobar xs
 
 foobar' :: [Integer] -> Integer
-foobar' xs =  sum . map (\x -> 7*x + 2) $ (filter (>3) xs)
+foobar' =  sum . map (\x -> 7*x + 2) . filter (>3)
