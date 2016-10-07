@@ -2,7 +2,7 @@ module Wholemeal
 where
 
   fun1 :: [Integer] -> Integer
-  fun1 = foldr (*) 1 . map (\x -> x - 2) . filter even
+  fun1 = product . map (\x -> x - 2) . filter even
 
   fun2 :: Integer -> Integer
   fun2 1 = 0
@@ -12,3 +12,8 @@ where
 
   fun3 :: Integer -> Integer
   fun3 = sum . filter even . takeWhile (>1) . iterate (\x -> if even x then x `div` 2 else 3 * x + 1)
+
+  data Tree a = Leaf
+              | Node Integer (Tree a) a (Tree a)
+
+  --foldTree :: [a] -> Tree a
